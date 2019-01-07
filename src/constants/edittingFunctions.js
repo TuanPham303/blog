@@ -1,5 +1,5 @@
-const edittingFunction = {
+const inlineCSSEdittingFunction = {
 
 };
 
-export default edittingFunction;
+export default inlineCSSEdittingFunction;
