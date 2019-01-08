@@ -1,10 +1,10 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React, { Component, Fragment } from 'react';
+import { RichUtils } from 'draft-js';
 
 const EdittingIcon = (props) => {
   const handleOnClick = () => {
-
-  };
+    props.handleStyleIconClick(props.name)
+  }
 
   return (
     <button type="button" onClick={handleOnClick}>

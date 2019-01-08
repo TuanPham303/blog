@@ -33,6 +33,10 @@ class BlogEditor extends Component {
     return 'not-handled';
   }
 
+  handleStyleIconClick = (name) => {
+    this.handleEditorChange(RichUtils.toggleInlineStyle(this.state.editorState, name));
+  }
+
   onBoldClick = () => {
     this.handleEditorChange(RichUtils.toggleInlineStyle(this.state.editorState, 'BOLD'));
   }
@@ -63,7 +67,7 @@ class BlogEditor extends Component {
           <button onClick={this.onCodeClick}>CODE</button>
           <button onClick={this.onRedClick}>RED</button> */}
           <EdittingPanel
-            handleEditorChange={this.handleEditorChange}
+            handleStyleIconClick={this.handleStyleIconClick}
           />
         </div>
         <div className="blogEditorWrapper">
