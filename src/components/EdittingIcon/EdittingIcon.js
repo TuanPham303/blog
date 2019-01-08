@@ -7,7 +7,9 @@ const EdittingIcon = (props) => {
   };
 
   return (
-    <button type="button" onClick={handleOnClick}>{props.name}</button>
+    <button type="button" onClick={handleOnClick}>
+      {props.name}
+    </button>
   );
 };
 
