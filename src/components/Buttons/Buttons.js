@@ -3,7 +3,7 @@ import { RichUtils } from 'draft-js';
 
 const EdittingIcon = (props) => {
   const handleOnClick = () => {
-    props.handleStyleIconClick(props.name)
+    props.handleEdittingButtonClick(props.name)
   }
 
   return (

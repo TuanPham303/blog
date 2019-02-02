@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
-import { EdittingIcon } from '..';
+import { EdittingButton } from '../../components';
 
-import { edittingFunctions } from '../../constants'
+import { edittingOptions } from '../../constants';
 
 class EdittingPanel extends Component {
-  renderEdittingIcon = () => edittingFunctions.inlineCSSEdittingFunction.map(icon => (
-    <EdittingIcon
+
+  renderEdittingIcon = () => edittingOptions.defaultOptions.map(icon => (
+    <EdittingButton
       name={icon}
-      handleStyleIconClick={this.props.handleStyleIconClick}
+      handleEdittingButtonClick={this.props.handleEdittingButtonClick}
     />
   ))
 

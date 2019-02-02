@@ -1,5 +1,5 @@
-import * as edittingFunctions from './edittingFunctions.js';
+import * as edittingOptions from './EdittingPanel.js';
 
 export {
-  edittingFunctions
+  edittingOptions
 }

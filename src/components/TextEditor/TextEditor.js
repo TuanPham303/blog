@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import { Editor, EditorState, RichUtils } from 'draft-js';
+import {Editor, EditorState, RichUtils, convertToRaw} from 'draft-js';
 import { EdittingPanel } from '..';
 
 import './BlogEditor.css';
@@ -33,24 +33,8 @@ class BlogEditor extends Component {
     return 'not-handled';
   }
 
-  handleStyleIconClick = (name) => {
+  handleEdittingButtonClick = (name) => {
     this.handleEditorChange(RichUtils.toggleInlineStyle(this.state.editorState, name));
-  }
-
-  onBoldClick = () => {
-    this.handleEditorChange(RichUtils.toggleInlineStyle(this.state.editorState, 'BOLD'));
-  }
-
-  onItalicClick = () => {
-    this.handleEditorChange(RichUtils.toggleInlineStyle(this.state.editorState, 'ITALIC'));
-  }
-
-  onUnderlineClick = () => {
-    this.handleEditorChange(RichUtils.toggleInlineStyle(this.state.editorState, 'UNDERLINE'));
-  }
-
-  onCodeClick = () => {
-    this.handleEditorChange(RichUtils.toggleInlineStyle(this.state.editorState, 'CODE'));
   }
 
   onRedClick = () => {
@@ -58,6 +42,7 @@ class BlogEditor extends Component {
   }
 
   render() {
+    console.log(convertToRaw(this.state.editorState.getCurrentContent()))
     return (
       <Fragment>
         <div>
@@ -67,14 +52,15 @@ class BlogEditor extends Component {
           <button onClick={this.onCodeClick}>CODE</button>
           <button onClick={this.onRedClick}>RED</button> */}
           <EdittingPanel
-            handleStyleIconClick={this.handleStyleIconClick}
+            handleEdittingButtonClick={this.handleEdittingButtonClick}
           />
         </div>
         <div className="blogEditorWrapper">
           <Editor
             customStyleMap={this.styleMap}
-            editorState={this.state.editorState}
-            onChange={this.handleEditorChange}
+            editorState={this.state.editorState} 
+            onChange={this.handleEditorChange} 
+            handleKeyCommand={this.handleKeyCommand}
           />
         </div>
       </Fragment>
