@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import { EdittingButton } from '../../components';
+import PropTypes from 'prop-types';
+import { EdittingButton } from '..';
 
 import { edittingOptions } from '../../constants';
 
 class EdittingPanel extends Component {
-
   renderEdittingIcon = () => edittingOptions.defaultOptions.map(icon => (
     <EdittingButton
       name={icon}
@@ -20,5 +20,13 @@ class EdittingPanel extends Component {
     );
   }
 }
+
+EdittingPanel.propTypes = {
+  handleEdittingButtonClick: PropTypes.func,
+};
+
+EdittingPanel.defaultProps = {
+  handleEdittingButtonClick: () => undefined,
+};
 
 export default EdittingPanel;

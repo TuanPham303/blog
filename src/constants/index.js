@@ -1,5 +1,5 @@
-import * as edittingOptions from './EdittingPanel.js';
+import defaultOptions from './EdittingPanel';
 
-export {
-  edittingOptions
-}
+export default {
+  defaultOptions,
+};

@@ -1,10 +1,11 @@
-import React, { Component, Fragment } from 'react';
-import { RichUtils } from 'draft-js';
+import React from 'react';
+import PropTypes from 'prop-types';
+// import { RichUtils } from 'draft-js';
 
 const EdittingIcon = (props) => {
   const handleOnClick = () => {
-    props.handleEdittingButtonClick(props.name)
-  }
+    props.handleEdittingButtonClick(props.name);
+  };
 
   return (
     <button type="button" onClick={handleOnClick}>
@@ -15,10 +16,12 @@ const EdittingIcon = (props) => {
 
 EdittingIcon.propTypes = {
   name: PropTypes.string,
+  handleEdittingButtonClick: PropTypes.func,
 };
 
 EdittingIcon.defaultProps = {
   name: '',
+  handleEdittingButtonClick: () => undefined,
 };
 
 export default EdittingIcon;

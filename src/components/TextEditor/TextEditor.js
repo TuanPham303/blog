@@ -1,8 +1,13 @@
 import React, { Component, Fragment } from 'react';
-import {Editor, EditorState, RichUtils, convertToRaw} from 'draft-js';
+import {
+  Editor,
+  EditorState,
+  RichUtils,
+  // convertToRaw,
+} from 'draft-js';
 import { EdittingPanel } from '..';
 
-import './BlogEditor.css';
+import './TextEditor.css';
 
 class BlogEditor extends Component {
   styleMap = {
@@ -42,7 +47,6 @@ class BlogEditor extends Component {
   }
 
   render() {
-    console.log(convertToRaw(this.state.editorState.getCurrentContent()))
     return (
       <Fragment>
         <div>
@@ -58,8 +62,8 @@ class BlogEditor extends Component {
         <div className="blogEditorWrapper">
           <Editor
             customStyleMap={this.styleMap}
-            editorState={this.state.editorState} 
-            onChange={this.handleEditorChange} 
+            editorState={this.state.editorState}
+            onChange={this.handleEditorChange}
             handleKeyCommand={this.handleKeyCommand}
           />
         </div>

@@ -1,5 +1,3 @@
-const defaultOptions = ['BOLD', 'ITALIC', 'UNDERLINE', 'CODE']
+const defaultOptions = ['BOLD', 'ITALIC', 'UNDERLINE', 'CODE'];
 
-export {
-  defaultOptions
-};
+export default defaultOptions;
