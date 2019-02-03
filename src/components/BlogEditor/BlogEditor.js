@@ -1,11 +1,17 @@
 import React, { Component, Fragment } from 'react';
-import {Editor, EditorState, RichUtils} from 'draft-js';
-import { EdittingPanel } from '../../components';
+import { Editor, EditorState, RichUtils } from 'draft-js';
+import { EdittingPanel } from '..';
 
 import './BlogEditor.css';
 
 class BlogEditor extends Component {
-  constructor (props) {
+  styleMap = {
+    RED: {
+      color: 'red',
+    },
+  }
+
+  constructor(props) {
     super(props);
     this.state = {
       editorState: EditorState.createEmpty(),
@@ -14,8 +20,8 @@ class BlogEditor extends Component {
 
   handleEditorChange = (editorState) => {
     this.setState({
-      editorState
-    })
+      editorState,
+    });
   };
 
   handleKeyCommand = (command, editorState) => {
@@ -47,12 +53,6 @@ class BlogEditor extends Component {
     this.handleEditorChange(RichUtils.toggleInlineStyle(this.state.editorState, 'RED'));
   }
 
-  styleMap = {
-    'RED': {
-      color: 'red',
-    },
-  }
-
   render() {
     return (
       <Fragment>
@@ -67,14 +67,14 @@ class BlogEditor extends Component {
           />
         </div>
         <div className="blogEditorWrapper">
-          <Editor 
+          <Editor
             customStyleMap={this.styleMap}
-            editorState={this.state.editorState} 
-            onChange={this.handleEditorChange} 
+            editorState={this.state.editorState}
+            onChange={this.handleEditorChange}
           />
         </div>
       </Fragment>
-    )
+    );
   }
 }
 

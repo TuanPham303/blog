@@ -1,17 +1,13 @@
-import React, { Component } from 'react';
-import { EdittingIcon } from '../../components';
+import React from 'react';
+import { EdittingIcon } from '..';
 
-class EdittingPanel extends Component {
-  render() {
-    return (
-      <div>
-        <EdittingIcon/>
-        <EdittingIcon/>
-        <EdittingIcon/>
-        <EdittingIcon/>
-      </div>
-    );
-  }
-}
+const EdittingPanel = () => (
+  <div>
+    <EdittingIcon />
+    <EdittingIcon />
+    <EdittingIcon />
+    <EdittingIcon />
+  </div>
+);
 
 export default EdittingPanel;
