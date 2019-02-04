@@ -1,9 +1,9 @@
-import BlogEditor from './BlogEditor/BlogEditor';
-import EdittingIcon from './EdittingIcon/EdittingIcon';
+import TextEditor from './TextEditor/TextEditor';
+import Buttons from './Buttons/Buttons';
 import EdittingPanel from './EdittingPanel/EdittingPanel';
 
 export {
-  BlogEditor,
-  EdittingIcon,
+  TextEditor,
+  Buttons,
   EdittingPanel,
 };

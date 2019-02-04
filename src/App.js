@@ -1,10 +1,10 @@
 import React from 'react';
-import { BlogEditor } from './components';
+import { TextEditor } from 'components';
 import './App.css';
 
 const App = () => (
   <div>
-    <BlogEditor />
+    <TextEditor />
   </div>
 );
 

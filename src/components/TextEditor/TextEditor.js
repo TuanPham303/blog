@@ -1,10 +1,10 @@
 import React, { Component, Fragment } from 'react';
 import { Editor, EditorState, RichUtils } from 'draft-js';
-import { EdittingPanel } from '..';
+import { EdittingPanel } from 'components';
 
-import './BlogEditor.css';
+import './TextEditor.css';
 
-class BlogEditor extends Component {
+class TextEditor extends Component {
   styleMap = {
     RED: {
       color: 'red',
@@ -57,11 +57,6 @@ class BlogEditor extends Component {
     return (
       <Fragment>
         <div>
-          {/* <button onClick={this.onBoldClick}>B</button>
-          <button onClick={this.onItalicClick}>I</button>
-          <button onClick={this.onUnderlineClick}>U</button>
-          <button onClick={this.onCodeClick}>CODE</button>
-          <button onClick={this.onRedClick}>RED</button> */}
           <EdittingPanel
             handleEditorChange={this.handleEditorChange}
           />
@@ -78,4 +73,4 @@ class BlogEditor extends Component {
   }
 }
 
-export default BlogEditor;
+export default TextEditor;

@@ -1,12 +1,12 @@
 import React from 'react';
-import { EdittingIcon } from '..';
+import { Buttons } from 'components';
 
 const EdittingPanel = () => (
   <div>
-    <EdittingIcon />
-    <EdittingIcon />
-    <EdittingIcon />
-    <EdittingIcon />
+    <Buttons />
+    <Buttons />
+    <Buttons />
+    <Buttons />
   </div>
 );
 
